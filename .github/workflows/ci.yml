@@ -25,6 +25,8 @@ jobs:
           make integration_tests
       - name: lint
         run: |
+          # Used by xref-helpmsgs-manpages
+          dnf -y install perl-Clone perl-FindBin
           curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin v1.61.0
           export PATH=$PATH:$HOME/go/bin
           make lint
