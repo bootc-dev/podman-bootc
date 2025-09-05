@@ -43,7 +43,7 @@ require (
 	github.com/containerd/stargz-snapshotter/estargz v0.15.1 // indirect
 	github.com/containerd/typeurl/v2 v2.1.1 // indirect
 	github.com/containers/buildah v1.35.3 // indirect
-	github.com/containers/image/v5 v5.30.0 // indirect
+	github.com/containers/image/v5 v5.30.1 // indirect
 	github.com/containers/libhvee v0.7.0 // indirect
 	github.com/containers/libtrust v0.0.0-20230121012942-c1716e8a8d01 // indirect
 	github.com/containers/ocicrypt v1.1.9 // indirect
