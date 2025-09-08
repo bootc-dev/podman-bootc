@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container: quay.io/centos/centos:stream9
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: build
         run: |
           set -xeuo pipefail
