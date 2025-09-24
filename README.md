@@ -1,7 +1,9 @@
 # Streamlining podman + bootc interactions
 
-This project aims to address <https://github.com/containers/podman/issues/21243>
-in alignment with the <https://github.com/containers/bootc> project.
+NOTE: This project is now in maintenance mode, and will be succeeded by
+[bcvk](https://github.com/bootc-dev/bcvk). Currently though, bcvk [does not
+support MacOS](https://github.com/bootc-dev/bcvk/issues/21) and so MacOS
+users should continue to use podman-bootc for now.
 
 ## Goals
 
