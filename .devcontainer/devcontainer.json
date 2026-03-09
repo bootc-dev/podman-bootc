@@ -1,0 +1,36 @@
+{
+  "name": "bootc-devenv-debian",
+  // TODO override this back to prod image
+  "image": "ghcr.io/bootc-dev/devenv-debian",
+  "customizations": {
+    "vscode": {
+      // Abitrary, but most of our code is in one of these two
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "golang.Go"
+      ]
+    }
+  },
+  "features": {},
+  "runArgs": [
+    // In general we hope that the outer environment has set up
+    // a user namespace to keep this secure.
+    "--cap-add=all",
+    // Required for mounting /proc in nested user namespace
+    "--security-opt", "label=disable",
+    // Allows access to /proc paths needed for nested containers
+    "--security-opt", "unmask=/proc/*",
+    // Device access for nested containers and VMs
+    "--device", "/dev/net/tun",
+    // I always want KVM
+    "--device", "/dev/kvm"
+  ],
+  "postCreateCommand": {
+    // Our init script
+    "devenv-init": "sudo /usr/local/bin/devenv-init.sh"
+  },
+  "remoteEnv": {
+    "PATH": "${containerEnv:PATH}:/usr/local/cargo/bin"
+  }
+}
+
