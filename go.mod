@@ -14,7 +14,7 @@ require (
 	github.com/onsi/gomega v1.32.0
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/cobra v1.8.0
-	golang.org/x/crypto v0.28.0
+	golang.org/x/crypto v0.45.0
 	golang.org/x/sys v0.26.0
 	golang.org/x/term v0.25.0
 	libvirt.org/go/libvirt v1.10002.0
