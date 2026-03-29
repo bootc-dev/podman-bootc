@@ -78,9 +78,12 @@ alternatively, you can download the latest development cutting-edge source
 brew install --head podman-bootc
 ```
 
-It will install xorriso and libvirt, but it doesn't install qemu.
-You need to install qemu manually, using brew:
+It will install xorriso and libvirt, but it doesn't install qemu and krunkit.
+
+You need to install qemu and krunkit manually, using brew:
 ```
+brew tap slp/krun
+brew install krunkit
 brew install qemu
 ```
 or by other mean and make it available in the path.
